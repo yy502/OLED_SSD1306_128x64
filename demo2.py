@@ -48,7 +48,7 @@ font = ImageFont.load_default()
 
 # Nah, second thoughts ... Alternatively load another TTF font.
 
-font = ImageFont.truetype('FreeSerif.ttf', 15)
+font = ImageFont.truetype('resources/FreeSerif.ttf', 15)
 
 
 oled.display()
@@ -62,7 +62,7 @@ sleep(3)
 draw.rectangle((0, 0, oled.width-1, oled.height-1), outline=255, fill=1)
 oled.display()
 sleep(3)
-logo = Image.open('pi_logo.png')
+logo = Image.open('resources/pi_logo.png')
 draw.bitmap((32, 0), logo, fill=0)
 
 oled.display()
