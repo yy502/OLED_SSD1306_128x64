@@ -18,23 +18,15 @@ Texts, fonts, images and vector graphics are handled by the Python Imaging Libra
 
 Supports 1-bit `BMP` or `PNG` images.
 
-#### Pillow ####
+#### Dependencies (Pillow and SMBus) ####
 
-    sudo apt-get install python-dev python-setuptools
-    sudo easy_install Pillow                                # or pip install?
-    
-    sudo apt-get install python3-dev python3-setuptools     # for Python 3
-    sudo easy_install3 Pillow
+    sudo apt-get install python-dev python-setuptools libjpeg-dev python-smbus
+    sudo easy_install Pillow
 
-#### I2C and SMBus ####
+#### I2C ####
 
-- Ensure `i2c-dev` is listed in `/etc/modules`
+- Ensure `/etc/modules` contains `i2c-dev`.
 - Use `raspi-config` to enable I2C on Raspberry Pi. 
 - Reboot
-- Enter `ls /dev` in terminal and `i2c-1` should be listed as a working device.
-- Now install `smbus` for Python
+- Ensure `i2c-1` is listed in `/dev` as a working device.
 
-
-
-    sudo apt-get install python-smbus
-    sudo apt-get install python3-smbus                      # for Python 3
