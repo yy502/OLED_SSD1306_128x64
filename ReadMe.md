@@ -34,5 +34,7 @@ Supports 1-bit `BMP` or `PNG` images.
 - Enter `ls /dev` in terminal and `i2c-1` should be listed as a working device.
 - Now install `smbus` for Python
 
+
+
     sudo apt-get install python-smbus
     sudo apt-get install python3-smbus                      # for Python 3
