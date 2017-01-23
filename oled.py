@@ -82,7 +82,7 @@ class ssd1306():
             self.bus.write_i2c_block_data(self.addr, self.data_mode, list(data[i:i+31]))
 
 
-    def display(self):
+    def flush(self):
         """
         The image on the "canvas" is flushed through to the hardware display.
         Takes the 1-bit image and dumps it to the SSD1306 OLED display.
@@ -107,9 +107,9 @@ class ssd1306():
 
         self._data(buf) # push out the whole lot
 
-    def cls(self):
+    def clear(self):
         self.canvas.rectangle((0, 0, self.width-1, self.height-1), outline=0, fill=0)
-        self.display()
+        self.flush()
 
     def onoff(self, onoff):
         if onoff:
