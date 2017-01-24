@@ -4,7 +4,7 @@
 
 # NOTE: You need to have PIL installed for your python at the Pi
 
-from .oled import ssd1306
+from oled import ssd1306
 from time import sleep
 from PIL import ImageFont, ImageDraw, Image
 font = ImageFont.load_default()
