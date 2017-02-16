@@ -7,7 +7,7 @@ i2cbus = SMBus(1)        # 1 = Raspberry Pi but NOT early REV1 board
 display = ssd1306(i2cbus)   # create oled object, nominating the correct I2C bus, default address
 
 # put border around the screen:
-display.canvas.rectangle((0, 0, oled.width-1, oled.height-1), outline=1, fill=0)
+display.canvas.rectangle((0, 0, display.width-1, display.height-1), outline=1, fill=0)
 
 # Write two lines of text.
 display.canvas.text((40,15),    'Hello', fill=1)
